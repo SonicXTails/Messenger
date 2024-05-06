@@ -1,0 +1,82 @@
+﻿<Window x:Class="Messanger.View.MessengerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Messanger.View"
+        mc:Ignorable="d"
+        Title="MessengerWindow" Height="450" Width="800" Background="#FF272727">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!--Height: 800-->
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="110"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border BorderThickness="1" CornerRadius="5" Margin="10,11,10,11">
+            <Border.Background>
+                <SolidColorBrush Color="#FF0139E8" Opacity="0.4"/>
+            </Border.Background>
+            <TextBlock Text="Пользователи" Foreground="White"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="18"/>
+        </Border>
+
+        <!--Только у Админа чата-->
+        <Button Grid.Column="1"
+                Grid.ColumnSpan="3"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center" 
+                Margin="10,11,10,11"
+                Content="Посмотреть логи чата" 
+                Foreground="White"
+                FontSize="18"/>
+
+        <ListBox Grid.Row="1"
+                 Grid.RowSpan="7"/>
+
+        <Button Grid.Column="1"
+                Grid.ColumnSpan="1"
+                VerticalContentAlignment="Center"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center" 
+                Content="Выйти" 
+                Foreground="White"
+                FontSize="11"
+                Grid.Row="7" Margin="10,11,10,11"/>
+        
+        <Button Grid.Column="3"
+                Grid.ColumnSpan="1"
+                VerticalContentAlignment="Center"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center" 
+                Content="Отпраивть" 
+                Foreground="White"
+                FontSize="11"
+                Grid.Row="7" Margin="10,11,10,11"/>
+
+        <TextBox Grid.Row="7"
+                 Grid.Column="2"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Left" Margin="0,11,0,11" Foreground="White"
+                 FontSize="12"/>
+
+        <ListBox Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 Grid.RowSpan="6"/>
+    </Grid>
+</Window>

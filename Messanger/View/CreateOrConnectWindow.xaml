@@ -1,0 +1,88 @@
+﻿<Window x:Class="Messanger.View.CreateOrConnectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Messanger.View"
+        mc:Ignorable="d"
+        Title="CreateOrConnectWindow" Height="450" Width="800" Background="#FF272727" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Storyboard x:Key="ColorAnimation">
+            <ColorAnimation
+                Storyboard.TargetName="textBlock"
+                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                From="White" To="#007acc" Duration="0:0:3" AutoReverse="True" RepeatBehavior="Forever" />
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="textBlock" 
+                   Grid.RowSpan="2"
+                   Grid.ColumnSpan="2"
+                   Text="Вход в мессенджер"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="45">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="White"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+        <TextBlock Grid.Row="3"
+                   Text="Введите имя пользователя"
+                   FontSize="18"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom" 
+                   Foreground="White"/>
+        <TextBox x:Name="NameOfUserTextBox"
+                 Grid.Row="3"
+                 Grid.Column="1"
+                 VerticalContentAlignment="Bottom"
+                 HorizontalContentAlignment="Center" 
+                 Foreground="White"
+                 FontSize="18" Margin="40,0,100,0"/>
+        
+        <Button  x:Name="OpenServer"
+                 Grid.Row="4"
+                 Grid.ColumnSpan="2" Margin="40, 0, 40, 0"
+                 VerticalAlignment="Bottom"
+                 Content="Создать сервер / Создать новый чат" Foreground="White" Click="OpenServer_Click"/>
+
+        <TextBlock Grid.Row="5"
+                   Text="Введите IP адресс сервера"
+                   FontSize="18"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom" 
+                   Foreground="White"/>
+        <TextBox x:Name="IpAddressTextBox"
+                 Grid.Row="5"
+                 Grid.Column="1"
+                 VerticalContentAlignment="Bottom"
+                 HorizontalContentAlignment="Center" 
+                 Foreground="White"
+                 FontSize="18" Margin="40,0,100,0"
+                 Text="{Binding IpAddress, UpdateSourceTrigger=PropertyChanged}"/>
+
+
+
+        <Button x:Name="ConnectToServer"
+                Grid.Row="6"
+                Grid.ColumnSpan="2" Margin="40, 0, 40, 0"
+                VerticalAlignment="Bottom"
+                Content="Подключиться к серверу / Подключиться к  чату" Foreground="White" Click="ConnectToServer_Click"/>
+    </Grid>
+</Window>

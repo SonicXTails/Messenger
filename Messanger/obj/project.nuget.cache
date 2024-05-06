@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ivu5iVX9/kL+QKiT4mnvdLPoN3DK/RXE/yspTqGyEqf8KD9S+gys6eqCNhcdaPLWokjTdqJtd5EecaHsTDWB1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SonicXTails\\OneDrive\\Рабочий стол\\Messanger\\Messanger\\Messanger.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SonicXTails\\.nuget\\packages\\materialdesigncolors\\3.0.0\\materialdesigncolors.3.0.0.nupkg.sha512",
+    "C:\\Users\\SonicXTails\\.nuget\\packages\\materialdesignthemes\\5.0.0\\materialdesignthemes.5.0.0.nupkg.sha512",
+    "C:\\Users\\SonicXTails\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}
